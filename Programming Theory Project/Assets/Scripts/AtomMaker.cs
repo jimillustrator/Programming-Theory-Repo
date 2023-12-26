@@ -4,26 +4,16 @@ using UnityEngine;
 
 public class AtomMaker : MonoBehaviour
 {
-    public GameObject atom;
+    public GameObject proton;
     public GameObject electron;
 
-    private float spawnX;
-    private float spawnY;
-    private float spawnZ;
-
-    private float atomSpawnTime;
-    private float startDelay = 1.0f;
-
-
-    void Start()
+    public virtual void ProtonCreator()
     {
-        InvokeRepeating("SpawnAtoms", startDelay, atomSpawnTime);
+        Instantiate(proton, transform.position, transform.rotation);
     }
 
-    void SpawnAtoms()
+    public virtual void ElectronCreator()
     {
-        Vector3 spawnPos = new Vector3(spawnX, spawnY, spawnZ);
-
-        Instantiate(atom, spawnPos, atom.transform.rotation);
+        Instantiate(electron, transform.position, transform.rotation);
     }
 }
