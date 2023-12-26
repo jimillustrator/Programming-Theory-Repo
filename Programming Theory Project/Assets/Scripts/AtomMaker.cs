@@ -5,6 +5,7 @@ using UnityEngine;
 public class AtomMaker : MonoBehaviour
 {
     public GameObject atom;
+    public GameObject electron;
 
     private float spawnX;
     private float spawnY;
