@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Hydrogen : AtomMaker
 {
-    public override void ProtonCreator()
+    private void Start()
     {
-        base.ProtonCreator();
+        ProtonCreator();
+        ElectronCreator();
     }
 }
