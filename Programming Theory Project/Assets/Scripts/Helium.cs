@@ -4,27 +4,38 @@ using UnityEngine;
 
 public class Helium : AtomMaker
 {
-    public int atomicNumber;
-    private BoxCollider protonCollider;
-    private float m_OffsetX;
-    public float OffsetX
+    [SerializeField] private int m_atomicNumber;
+    public int atomicNumber
     {
-        get{return m_OffsetX;}
-        set { m_OffsetX = value;}
+        get { return m_atomicNumber; }
+        set
+        {
+            if (value > 0 && value < 5)
+            {
+                m_atomicNumber = value;
+            }
+            else
+            {
+                Debug.Log("Please pick an integer between 1 and 5");
+            }
+        }
     }
+
+    //private BoxCollider protonCollider;
+    //public float OffsetX;
 
     private void Start()
     {
-        protonCollider = proton.GetComponent<BoxCollider>();
+        ProtonCreator();
     }
 
     public override void ProtonCreator()
     {
-        OffsetX = (protonCollider.size.x * atomicNumber) / 2;
+        //OffsetX = (protonCollider.size.x * atomicNumber) / 2;
 
         for (int i = 0; i < atomicNumber; i++)
         {
-            Instantiate(proton, transform.position, transform.rotation);
+            Instantiate(proton, new Vector3((transform.position.x + i), transform.position.y, transform.position.z), transform.rotation);
         }
     }
 

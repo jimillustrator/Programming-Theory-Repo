@@ -226,7 +226,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824448712}
-  - component: {fileID: 824448714}
   - component: {fileID: 824448713}
   m_Layer: 0
   m_Name: AtomMaker
@@ -264,21 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proton: {fileID: 8217005621349186455, guid: baf4e6997963343cbb8067ea353c57bf, type: 3}
   electron: {fileID: 888797674377727389, guid: 8360781a6cc8d48bf9b7f16d9faa0cb0, type: 3}
-  atomicNumber: 0
---- !u!114 &824448714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824448711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0df422ce5e24bef9b344372fe5cb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  proton: {fileID: 8217005621349186455, guid: baf4e6997963343cbb8067ea353c57bf, type: 3}
-  electron: {fileID: 888797674377727389, guid: 8360781a6cc8d48bf9b7f16d9faa0cb0, type: 3}
+  m_atomicNumber: 4
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
