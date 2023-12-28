@@ -6,16 +6,21 @@ public class Helium : AtomMaker
 {
     public int atomicNumber;
     private BoxCollider protonCollider;
-    private float offsetX;
+    private float m_OffsetX;
+    public float OffsetX
+    {
+        get{return m_OffsetX;}
+        set { m_OffsetX = value;}
+    }
 
     private void Start()
     {
-        protonCollider = GetComponent<BoxCollider>();
+        protonCollider = proton.GetComponent<BoxCollider>();
     }
 
     public override void ProtonCreator()
     {
-        //offsetX = (protonCollider.size.x * atomicNumber)/2;
+        OffsetX = (protonCollider.size.x * atomicNumber) / 2;
 
         for (int i = 0; i < atomicNumber; i++)
         {
